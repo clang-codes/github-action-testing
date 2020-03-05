@@ -1,6 +1,5 @@
 on:
-  schedule:
-    - cron: '0 0 31 2 7'
+  [push]
 
 jobs:
   certmon:
@@ -9,7 +8,7 @@ jobs:
     steps:
     - name: Monitor cert step
       id: certmon
-      uses: s1dequest/certmon-action-testing@v0.1
+      uses: s1dequest/certmon-action-testing@v0.3
       with:
         EV_PROXY: null
         EV_SLACK-CHANNEL-ID: null
